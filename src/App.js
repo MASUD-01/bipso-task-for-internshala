@@ -78,10 +78,20 @@ function App() {
               <h3 className="font-bold text-lg">welcome to know Details for
                 <span className='text-red-400'> {showModalData.original_title
                 }</span> </h3>
-              <p className="py-4"> original_language: {showModalData.original_language}</p>
-              <p className="py-4">status: {showModalData.status}</p>
-              <p className="py-4">popularity: {showModalData.popularity}</p>
-              <p className="py-4">vote_average: {showModalData.vote_average}</p>
+              <div className='grid grid-cols-2'>
+                <div>
+                  <p className="py-4 "> original_language: <span className='text-red-400'>{showModalData.original_language}</span> </p>
+                  <p className="py-4">status: <span className='text-red-400'>{showModalData.status}</span> </p>
+                  <p className="py-4">popularity: <span className='text-red-400'> {showModalData.popularity}</span></p>
+                  <p className="py-4">vote_average: <span className='text-red-400'>{showModalData.vote_average}</span> </p>
+                </div>
+                <div>
+                  <img src={`https://image.tmdb.org/t/p/original${showModalData.poster_path}`} alt="Shoes" />
+                </div>
+
+              </div>
+
+
               <p className="py-4">{showModalData.overview}</p>
               <div className="modal-action">
                 <label htmlFor="my-modal-6" className="btn">Close!</label>

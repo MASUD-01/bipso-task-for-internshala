@@ -1,5 +1,4 @@
 import React from 'react';
-import img from '../asset/download (1).jpg'
 
 const ShowComponent = ({ data, setModalShowData }) => {
     const showModalDetails = (id) => {
@@ -20,9 +19,9 @@ const ShowComponent = ({ data, setModalShowData }) => {
         fetchData()
     }
     return (
-        <label htmlFor="my-modal-6 cursor-pointer" onClick={() => showModalDetails(data.id)}>
+        <label htmlFor="my-modal-6" onClick={() => showModalDetails(data.id)}>
             <div className="card max-w-96 bg-base-100 shadow-xl mx-auto cursor-pointer">
-                <figure><img src={img} alt="Shoes" /></figure>
+                <figure><img src={`https://image.tmdb.org/t/p/original${data.poster_path}`} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title"> Movies name: {data.original_title.slice(0, 15)}</h2>
                     <h2 className="card-title"> Movies popularity: {data.popularity}</h2>
