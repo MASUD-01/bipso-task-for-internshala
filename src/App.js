@@ -60,7 +60,7 @@ function App() {
 
       {loading && <p className='text-center text-2xl'>Loading....</p>}
       {error && <p className='text-center text-2xl'>{error}</p>}
-      {filterData.length === 0 && <p className='text-center text-2xl'>This year hasn't release any movies</p>}
+      {filterData.length === 0 && <p className='text-center text-2xl'>There is no movies</p>}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 p-6 sm:m-6 sm:p-0'>
         {
           filterData.map((data) => <ShowComponent key={data.id} data={data} setModalShowData={setModalShowData}></ShowComponent>)
